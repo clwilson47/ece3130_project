@@ -65,6 +65,10 @@ double lastDateFrequency = 0.0;
 int frequencyIndex = 0;
 int currentFrequency = 0;
 int lastSwitchTime = 13;
+
+int maxFrequency = 20000; 
+int minFrequency = 20; 
+
 void CheckFrequency()
 {
 
@@ -75,7 +79,10 @@ void CheckFrequency()
     for (; frequency_list[i] != INT32_MAX; i++)
         if (frequency_list[i] < smallest)
             smallest = frequency_list[i];
-    lastSwitchTime = 20 - smallest / 100;
+
+    lastSwitchTime = minFrequency - smallest / 100;           //need to fix equation
+                                                            // smallest is based on from 
+
     lastDateFrequency = date();
     if (frequency_list[0] == INT32_MAX)
     {
