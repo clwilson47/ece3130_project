@@ -38,6 +38,7 @@ void EnableClock()
 
 uint8_t presetIndex = 0;
 
+//Frequencies go by K value
 int Frequencies[3][16] = 
 {
 {131, 147, 165, 175, 196, 220, 247, 262, 294, 330, 349, 392, 440, 494, 523},
